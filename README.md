@@ -33,82 +33,104 @@ We will be evaluating
 
 ========================================================================
 
-TestCase #   Description															Expected result.                                                  				 Actual result
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TestCase #   Description				Expected result.				Actual result													                                                  				 
+--------------------------------------------------------------------------------------------------------------------------------
 Success flows:
 ---------------------------
 
-1. Select pizza = "Small pizza with no toppings" and set "quantity"=1
- enter a valid "name", "email", "phone number" and place order button.  			: A success text box should pop up indicating 
-							  														the type of pizza ordered along with correct cost calculated.						Pass.
+1. Select pizza = "Small pizza with no toppings"		
+and set "quantity"=1 enter a valid "name", "email", 
+"phone number" and place order button.  			:A success text box should pop 					Pass.								up indicating the type of pizza ordered
+								along with correct cost calculated.						
 1.1Repeat above steps with pizza type selected as 
-"Large - no toppings", quantity 1,3 and 5											: A success text box should pop up indicating		 	
-																					the type of pizza ordered along with correct cost calculated.						Pass.
+"Large - no toppings", quantity 1,3 and 5																			:A success text box should pop up indicating		Pass.	 	  							 the type of pizza ordered along with correct 
+								cost calculated.						
 2.Select pizza = "Medium pizza with 2 toppings
 " and set "quantity"=1
  enter a valid "toppings1,"toppings2,"name", "email", 
-"phone number" and place order button.  											: A success text box should pop up indicating 
-							  														the type of pizza ordered along with correct cost calculated.						Pass.
+"phone number" and place order button.  																			:A success text box should pop up indicating 		Pass.
+								the type of pizza ordered along with correct
+								cost calculated.						
 2.1Repeat aboves steps with pizza type selected as 
-"Large with 2 toppings", quantity 1,3 and 5											: A success text box should pop up indicating the									Pass.
-																					type of pizza ordered along with correct cost calculated.
-3. Select pizza = "Small pizza with 1 toppings" and set "quantity"=3
- enter a valid "name", "email", "phone number" and place order button.  			: A success text box should pop up indicating 										Pass.
-																					the type of pizza ordered along with correct cost calculated.
+"Large with 2 toppings", quantity 1,3 and 5											 								 :A success text box should pop up indicating the  	Pass.									type of pizza ordered along with correct cost
+								calculated.
 
-4. Select pizza = "Small pizza with 1 toppings" and set "quantity"=4				:All the entered fields should be Reset.											Fail(see observation 4.)				  			
-  enter a valid "name", "email", "phone number" and Reset button
+3. Select pizza = "Small pizza with 1 toppings" 
+and set "quantity"=3 enter a valid "name", 
+"email", "phone number" and place order button.  		: A success text box should pop up indicating 		Pass.								        the type of pizza ordered along with correct
+								cost calculated.
 
-							 			
+4. Select pizza = "Small pizza with 1 toppings"
+and set "quantity"=4enter a valid "name", 			:All the entered fields should be Reset.		Fail
+enter a valid "name", "email", "phone number" and Reset button							(see observation 															4.)		
+						 			
 Failure flows:
 ---------------------------
 
-1. Select pizza = "small pizza with no topping" and set "quantity"= -1       		:An error message has to be displayed or 				                			Fail(see observation 3.)
-						                											GUI should not allow to input -ve numbers
+1. Select pizza = "small pizza with no topping" 
+and set "quantity"= -1       					:An error message has to be displayed or 	Fail(see 									GUI should not allow to input -ve numbers	Observ 3.)																				
 2. Boundary value test- 
-    Select pizza = "small pizza with no topping" and set "quantity"= 6           	:An error message is to be displayed to the
-	and 0									 										user indicating maximum quantity allowed is 5 and minimum is 1   					Fail(see -Requirements)
-3.Select pizza = "Large pizza with no topping" and set "quantity"=1,
-    enter a valid "phone num" and an "empty name"									:An error message alert should pop up indicating "Name is missing "					Pass.
+    Select pizza = "small pizza with no topping" 
+    and set "quantity"= 6  and 0         			:An error message is to be displayed to the	Fail(see -
+								user indicating maximum quantity allowed is      Requirements)
+								5 and minimum is 1		 										   					
+3.Select pizza = "Large pizza with no topping" 
+and set "quantity"=1,enter a valid "phone num" 
+and an "empty name"						:An error message alert should pop up  		Pass.
+								indicating"Name is missing "					
 
-4. Select pizza = "Medium pizza with 2 toppings" and set "quantity"=2,				:An error message alert should pop up indicating "Phone is missing "				Pass.
-    enter a valid "name" and an "empty phone num" 
- 
-5. Select pizza = "Large pizza with 2 toppings" and set "quantity"=3,				:An error message has to be displayed or											Fail(see observation 6.)
-    enter a valid "name" and an "invalid phone num"(non-digit input)				GUI should not allow to input alphanumeric characters
+4. Select pizza = "Medium pizza with 2 toppings"
+and set "quantity"=2,						:An error message alert should pop up		Pass.
+enter a valid "name" and an 					indicating "Phone is missing "
+"empty phone num" 												
+    
+5. Select pizza = "Large pizza with 2 toppings" 
+and set "quantity"=3, enter a valid "name"
+and an "invalid phone num"(non-digit input)			:An error message has to be displayed or	Fail(see 					 				GUI should not allow to input 	           observation 6.)	
+								alphanumeric characters
+   								
 
-6. Select pizza = "small pizza with no topping" and set "quantity"=1,				:An error message alert should pop up indicating "Name is missing "					Pass.
-    enter an "empty name" and an "empty phone num".									and "Phone is missing "
+6. Select pizza = "small pizza with no topping"
+and set "quantity"=1,enter an "empty name"
+and an "empty phone num".					:An error message alert should pop up		Pass.
+								indicating "Name is missing "					
+    								and "Phone is missing "
 
-7. Select pizza = "Small pizza with no toppings" and set "quantity"=1				:An error message has to be displayed or
-   enter a valid "name", "email", "phone number",select both cash 					GUI should not allow to select both the payment options								Fail (see observation 2)
-   and credit card payment and place order button.
+7. Select pizza = "Small pizza with no toppings" 
+  and set "quantity"=1 enter a valid "name", "email", 		:An error message has to be displayed or 	Fail (see 
+ "phone number",select both cash and credit card 		GUI should not allow to select both		observation 2)	
+ 	payment and place order button.				the payment options
+ 													     
+8. Select pizza = "Large pizza with 2 toppings"
+and set "quantity"=3,enter a valid "name","phone",
+invalid email (email without domain and @ symbol 		:An error message has to be displayed 		Fail (see 									or GUI should not allow to input		observation 5)
+								invalid email	
+    									
+    	
 
-8. Select pizza = "Large pizza with 2 toppings" and set "quantity"=3,				:An error message has to be displayed or											Fail (see observation 5)
-   enter a valid "name","phone", invalid email (email without domain 				GUI should not allow to input invalid email	
-   name and @ symbol) 	
-
-9. Enter an "Empty Pizza", "quantity"=1,a valid "name","phone",
-   payment information,and place order button 										:An error message alert should pop up indicating "Pizza is missing" 				Fail (see observation 7)
+9. Enter an "Empty Pizza", "quantity"=1,a 
+valid "name","phone",payment information
+and place order button 						:An error message alert should pop up		Fail (see
+								indicating "Pizza is missing" 			 observation 7)
    
 
-10. Select pizza = "Medium pizza with 2 toppings" and set "quantity"=1,				:An error message alert should pop up indicating									Fail (see observation 7) 	 
-enter a valid "name","phone", an "empty payment information							"Payment Information is missing"
-   
-11.Select pizza = "Small pizza with 1 toppings",set "quantity"=1					:An error message has to be displayed or											Fail (see observation 8)							
-"toppings1"=Olives, "toppings2"=Mushrooms,enter valid "name","phone" 				GUI should not allow to select Toppings2	
+10. Select pizza = "Medium pizza with 2 toppings"		:An error message alert should 			Fail (see 									pop up indicating														"Payment Information is missing" 																		observation 7)
+and set "quantity"=1,enter a valid "name","phone",		
+"empty payment information"						
+	
+11.Select pizza = "Small pizza with 1 toppings",set		:An error message has to be displayed or	Fail (see 
+"quantity"=1,"toppings1"=Olives, 				GUI should not allow to select Toppings2	observation 8)
+"toppings2"=Mushrooms,enter valid "name","phone" 											
+11.1Repeat steps(11) with pizza type selected as 		:An error message has to be displayed or	Fail (see 	"Large - no toppings"						GUIshould not allow to select both Toppings1	observation 8)										and Toppings 2 						11.2Repeat steps(10) with pizza type selected as		:An error message has to be displayed or	Fail (see
+"Large - 2 toppings", and set both "toppings1"			GUI should not allow to select same topping	observation 1)
+and "toppings2" to Olives					for both Toppings1 and Toppings2
 
-11.1Repeat steps(11) with pizza type selected as 									:An error message has to be displayed or											Fail (see observation 8)
-"Large - no toppings"																GUI should not allow to select both Toppings1 and Toppings 2
 
-11.2Repeat steps(11) with pizza type selected as 									:An error message has to be displayed or
-"Large - 2 toppings", and set both "toppings1" 										GUI should not allow to select same topping for both Toppings1 and Toppings2		Fail (see observation 1)
-and "toppings2" to Olives
 
 Requirements:
 -------------------------------- 
  
-Maximum Quantity: There are currently no limits set, but for boundary testing let’s assume 5.
+Maximum Quantity: There are currently no limits set, but for boundary testing letâ€™s assume 5.
 Max length of field names: Name,Email and Phone is currently set at 100.
 
 Observations:
